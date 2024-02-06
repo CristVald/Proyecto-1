@@ -83,21 +83,3 @@ def developer_reviews_analysis(desarrolladora: str = Query(...,
                             example= "Smartly Dressed Games")):
     return fa.developer_reviews_analysis(desarrolladora)
 
-
-
-
-
-@app.get('/recomendacion_juego',
-         description=""" <font color="blue">
-                    INSTRUCCIONES<br>
-                    1. Haga clik en "Try it out".<br>
-                    2. Ingrese el nombre de un juego en box abajo.<br>
-                    3. Scrollear a "Resposes" para ver los juegos recomendados.
-                    </font>
-                    """,
-         tags=["Recomendación"])
-def recomendacion_juego(game: str = Query(..., 
-                                         description="Juego a partir del cuál se hace la recomendación de otros juego", 
-                                         example="Killing Floor")):
-    return fa.recomendacion_juego(game)
-
