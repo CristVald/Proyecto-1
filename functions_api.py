@@ -14,6 +14,8 @@ df_user_for_genre = pd.read_parquet("df_userforgenre.parquet")
 df_item_developer_year = pd.read_parquet("df_item_developer_year.parquet")
 df_best_developer = pd.read_parquet("df_best_developer.parquet")
 
+
+
       
 def developer(desarrollador: str):
     '''
@@ -49,6 +51,7 @@ def developer(desarrollador: str):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error interno del servidor: {str(e)}")
+
 
 
 
@@ -99,6 +102,9 @@ def userdata(user_id:str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error interno del servidor: {str(e)}")
 
+
+
+
 def userforgenre(genero):
     '''
     Esta función devuelve el top 5 de usuarios con más horas de juego en un género específico, junto con su URL de perfil y ID de usuario.
@@ -142,6 +148,10 @@ def userforgenre(genero):
         raise HTTPException(status_code=500, detail=f"Error interno del servidor: {str(e)}")
 
 
+
+
+
+
 def best_developer_year(anio):
     
     try:
@@ -169,6 +179,10 @@ def best_developer_year(anio):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error interno del servidor: {str(e)}")
+
+
+
+
 
 def developer_reviews_analysis(desarrolladora):
     
