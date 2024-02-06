@@ -101,24 +101,3 @@ def recomendacion_juego(game: str = Query(...,
                                          example="Killing Floor")):
     return fa.recomendacion_juego(game)
 
-
-
-
-
-
-
-@app.get('/recomendacion_usuario',
-         description=""" <font color="blue">
-                    INSTRUCCIONES<br>
-                    1. Haga clik en "Try it out".<br>
-                    2. Ingrese el id del usuario en box abajo.<br>
-                    3. Scrollear a "Resposes" para ver los juegos recomendados para ese usuario.
-                    </font>
-                    """,
-         tags=["Recomendación"])
-
-
-def recomendacion_usuario(user: str = Query(..., 
-                                         description="Usuario a partir del cuál se hace la recomendación de los juego", 
-                                         example="barkboy")):
-    return fa.recomendacion_usuario(user) 
