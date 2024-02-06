@@ -15,7 +15,6 @@ df_item_developer_year = pd.read_parquet("df_item_developer_year.parquet")
 df_best_developer = pd.read_parquet("df_best_developer.parquet")
 
 
-
       
 def developer(desarrollador: str):
     '''
