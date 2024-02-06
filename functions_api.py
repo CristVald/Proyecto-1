@@ -13,10 +13,6 @@ df_user_data = pd.read_parquet("df_user_data.parquet")
 df_user_for_genre = pd.read_parquet("df_userforgenre.parquet")
 df_item_developer_year = pd.read_parquet("df_item_developer_year.parquet")
 df_best_developer = pd.read_parquet("df_best_developer.parquet")
-df_pivot_norm = pd.read_parquet("df_pivot_norm.parquet")
-df_item_sim = pd.read_parquet("df_item_sim.parquet")
-df_user_sim = pd.read_parquet("df_user_sim.parquet")
-
 
       
 def developer(desarrollador: str):
