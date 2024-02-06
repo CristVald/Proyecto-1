@@ -30,17 +30,20 @@ def developer(desarrollador: str):
             - 'porcentaje_gratis_por_año' (dict): Porcentaje de contenido gratuito por año según la empresa desarrolladora.
     '''
     try:
-        # Filtramos el dataframe por desarrollador de interés
+            # Filtramos el dataframe por desarrollador de interés
         data_filtrada = df_item_developer_year[df_item_developer_year["developer"] == desarrollador]
 
-        # La cantidad de items por año
+            # La cantidad de items por año
         cantidad_por_año = data_filtrada.groupby("release_year")["item_id"].count()
 
-        # La cantidad de elementos gratis por año
+            # La cantidad de elementos gratis por año
         cantidad_gratis_por_año = data_filtrada[data_filtrada["price"] == 0.0].groupby("release_year")["item_id"].count()
 
-        # El porcentaje de elementos gratis por año
+            # El porcentaje de elementos gratis por año
         porcentaje_gratis_por_año = (cantidad_gratis_por_año / cantidad_por_año * 100).fillna(0).astype(int)
+
+            # Agregamos el símbolo de porcentaje (%) al valor del porcentaje
+        porcentaje_gratis_por_año = porcentaje_gratis_por_año.astype(str) + '%'
 
         result_dict = {
             "cantidad_por_año": cantidad_por_año.to_dict(),
