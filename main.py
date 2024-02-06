@@ -13,9 +13,9 @@ app = FastAPI()
 # Funciones
 @app.get(path = '/developer',
           description = """ <font color="blue">
-                        1. Haga clik en "Try it out".<br>
-                        2. Ingrese el nombre del desarrollador en el box abajo.<br>
-                        3. Scrollear a "Resposes" para ver la cantidad de items y porcentaje de contenido Free por año de ese desarrollador.
+                        1. Haz clik en "Try it out".<br>
+                        2. Ingresa el nombre del desarrollador. <br>
+                        3. Ve a la parte de respuestas para ver la cantidad de items y porcentaje de contenido gratuito por año de ese desarrollador.
                         </font>
                         """,
          tags=["Consultas Generales"])
@@ -28,9 +28,9 @@ def developer(desarrollador: str = Query(...,
 @app.get(path = '/userdata',
           description = """ <font color="blue">
                         INSTRUCCIONES<br>
-                        1. Haga clik en "Try it out".<br>
-                        2. Ingrese el user_id en el box abajo.<br>
-                        3. Scrollear a "Resposes" para ver la cantidad de dinero gastado por el usuario, el porcentaje de recomendación que realiza el usuario y cantidad de items que tiene el mismo.
+                        1. Haz clik en "Try it out".<br>
+                        2. Ingrese el user_id.<br>
+                        3. Ve a la parte de respuestas para ver la cantidad de dinero gastado por el usuario, el porcentaje de recomendación que realiza y cantidad de items que tiene el mismo.
                         </font>
                         """,
          tags=["Consultas Generales"])
@@ -43,9 +43,9 @@ def userdata(user_id: str = Query(...,
     
 @app.get(path = '/userforgenre',
           description = """ <font color="blue">
-                        1. Haga clik en "Try it out".<br>
-                        2. Ingrese el género en el box abajo.<br>
-                        3. Scrollear a "Resposes" para ver Top 5 de usuarios con más horas de juego en el género dado, con su URL y user_id.
+                        1. Haz clik en "Try it out".<br>
+                        2. Ingresa el género.<br>
+                        3. Ve a la parte de respuestas para ver al usuario que más horas ha jugado dicho genero y una lista de la cantidad de horas por año.
                         </font>
                         """,
          tags=["Consultas Generales"])
@@ -57,14 +57,14 @@ def userforgenre(genero: str = Query(...,
 
 @app.get(path = '/best_developer_year',
           description = """ <font color="blue">
-                        1. Haga clik en "Try it out".<br>
-                        2. Ingrese el género en el box abajo.<br>
-                        3. Scrollear a "Resposes" para ver el top 3 de desarrolladores con juegos MÁS recomendados por usuarios para el año dado.
+                        1. Haz clik en "Try it out".<br>
+                        2. Ingresa el año.<br>
+                        3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año, basado en recomendaciónes positivas.
                         </font>
                         """,
          tags=["Consultas Generales"])
 def best_developer_year(anio: int = Query(..., 
-                            description="Mejores 3 desarrolladores del año", 
+                            description="Mejor desarrolladora del año", 
                             example= 2012)):
     return fa.best_developer_year(anio)
 
@@ -72,9 +72,9 @@ def best_developer_year(anio: int = Query(...,
 
 @app.get(path = '/developer_reviews_analysis',
           description = """ <font color="blue">
-                        1. Haga clik en "Try it out".<br>
-                        2. Ingrese el género en el box abajo.<br>
-                        3. Scrollear a "Resposes" para ver un diccionario con el nombre del desarrollador como llave y la cantidad de opiniones positivas o negativas.
+                        1. Haz clik en "Try it out".<br>
+                        2. Ingresa la empresa desarrolladora.<br>
+                        3. Ve a la parte de respuestas para ver un diccionario con el nombre del desarrollador y la cantidad de opiniones positivas o negativas obtenidas por la misma.
                         </font>
                         """,
          tags=["Consultas Generales"])
