@@ -57,7 +57,6 @@ def developer(desarrollador: str):
 
 
 
-
 def userdata(user_id:str):
     '''
     Esta función devuelve información sobre un usuario según su 'user_id'.
