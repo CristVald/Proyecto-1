@@ -13,7 +13,7 @@ app = FastAPI()
 # Funciones
 @app.get(path = '/developer',
           description = """ <font color="blue">
-                        1. Haz clik en "Try it out".<br>
+                        1. Haz click en "Try it out".<br>
                         2. Ingresa el nombre del desarrollador. <br>
                         3. Ve a la parte de respuestas para ver la cantidad de items y porcentaje de contenido gratuito por año de ese desarrollador.
                         </font>
@@ -28,7 +28,7 @@ def developer(desarrollador: str = Query(...,
 @app.get(path = '/userdata',
           description = """ <font color="blue">
                         INSTRUCCIONES<br>
-                        1. Haz clik en "Try it out".<br>
+                        1. Haz click en "Try it out".<br>
                         2. Ingresa el User_id.<br>
                         3. Ve a la parte de respuestas para ver la cantidad de dinero gastado por el usuario, el porcentaje de recomendación que realiza y cantidad de items que tiene el mismo.
                         </font>
@@ -43,7 +43,7 @@ def userdata(user_id: str = Query(...,
     
 @app.get(path = '/userforgenre',
           description = """ <font color="blue">
-                        1. Haz clik en "Try it out".<br>
+                        1. Haz click en "Try it out".<br>
                         2. Ingresa el género.<br>
                         3. Ve a la parte de respuestas para ver al usuario que más horas ha jugado dicho genero y una lista de la cantidad de horas por año.
                         </font>
@@ -57,7 +57,7 @@ def userforgenre(genero: str = Query(...,
 
 @app.get(path = '/best_developer_year',
           description = """ <font color="blue">
-                        1. Haz clik en "Try it out".<br>
+                        1. Haz click en "Try it out".<br>
                         2. Ingresa el año.<br>
                         3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año(2010 - 2015), basado en recomendaciones positivas.
                         </font>
@@ -72,7 +72,7 @@ def best_developer_year(anio: int = Query(...,
 
 @app.get(path = '/developer_reviews_analysis',
           description = """ <font color="blue">
-                        1. Haz clik en "Try it out".<br>
+                        1. Haz click en "Try it out".<br>
                         2. Ingresa la empresa desarrolladora.<br>
                         3. Ve a la parte de respuestas para ver un diccionario con el nombre del desarrollador y la cantidad de opiniones positivas o negativas obtenidas por la misma.
                         </font>
