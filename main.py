@@ -29,7 +29,7 @@ def developer(desarrollador: str = Query(...,
           description = """ <font color="blue">
                         INSTRUCCIONES<br>
                         1. Haz clik en "Try it out".<br>
-                        2. Ingrese el user_id.<br>
+                        2. Ingresa el User_id.<br>
                         3. Ve a la parte de respuestas para ver la cantidad de dinero gastado por el usuario, el porcentaje de recomendación que realiza y cantidad de items que tiene el mismo.
                         </font>
                         """,
@@ -59,7 +59,7 @@ def userforgenre(genero: str = Query(...,
           description = """ <font color="blue">
                         1. Haz clik en "Try it out".<br>
                         2. Ingresa el año.<br>
-                        3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año, basado en recomendaciónes positivas.
+                        3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año, basado en recomendaciones positivas.
                         </font>
                         """,
          tags=["Consultas Generales"])
