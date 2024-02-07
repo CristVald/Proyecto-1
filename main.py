@@ -59,7 +59,7 @@ def userforgenre(genero: str = Query(...,
           description = """ <font color="blue">
                         1. Haz clik en "Try it out".<br>
                         2. Ingresa el año.<br>
-                        3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año, basado en recomendaciones positivas.
+                        3. Ve a la parte de respuestas para ver a la mejor desarrolladora por año(2010 - 2015), basado en recomendaciones positivas.
                         </font>
                         """,
          tags=["Consultas Generales"])
